@@ -27,14 +27,14 @@ for person in os.listdir(faces_folder):
             image = face_recognition.load_image_file(img_path)
             encodings = face_recognition.face_encodings(image)
             if len(encodings) == 0:
-                print(f"  ⚠️ No face found in {img_file}, skipping...")
+                print(f" No face found in {img_file}, skipping...")
                 continue
 
             encoding = encodings[0]
             known_encodings.append(encoding)
             known_names.append(person)
         except Exception as e:
-            print(f"  ❌ Error processing {img_file}: {e}")
+            print(f" Error processing {img_file}: {e}")
 
 print("All images processed successfully!")
 print(f"Known people: {set(known_names)}")
@@ -76,7 +76,7 @@ while True:
                 requests.get(URL, params={"person": name}, timeout=5)
                 print(f"Sent to ESP: {name}")
             except requests.RequestException as e:
-                print(f"  ❌ Error sending to ESP: {e}")
+                print(f" Error sending to ESP: {e}")
             last_name = name
 
         # Draw rectangle and label
@@ -94,3 +94,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
