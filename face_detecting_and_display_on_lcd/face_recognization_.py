@@ -4,7 +4,7 @@ import os
 import requests
 
 #configure the esp ip and urland face folder path
-ESP_IP = "10.189.212.184"
+ESP_IP = "11.164.215.183"
 URL = f"http://{ESP_IP}/name"
 faces_folder = "faces"
 tolerance = 0.5  # Lower = stricter matching
@@ -94,4 +94,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
 
