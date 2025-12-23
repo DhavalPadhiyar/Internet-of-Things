@@ -2,8 +2,8 @@
 #include <ESP8266WebServer.h>
 #include <LiquidCrystal_I2C.h>
 
-const char* ssid = "MMN";
-const char* password = "Milan@2555";
+const char* ssid = "My WiFi";
+const char* password = "My Password";
 
 ESP8266WebServer server(80);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
